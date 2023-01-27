@@ -9,7 +9,7 @@ module.exports = function toReadable (number) {
     return tens[Math.floor(number/10)-2] + (digit ? (" " + units[digit]) : "");
    }
    else {
-    return units[Math.floor(number/100)] +" hundred" + (number%100 == 0 ? "" : "" + toReadable(number%100));
+    return units[Math.floor(number/100)] +" hundred" + (number%100 == 0 ? "" : " " + toReadable(number%100));
    }
 
 };
